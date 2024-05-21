@@ -1,0 +1,194 @@
+understanding strings problem done by nandiswar:
+1. **Reverse a String:**
+   Write a function that takes a string as input and returns the string reversed.
+
+ans:
+
+var n = "nandiswar";
+
+function reverse(n)
+{
+a = n.length;
+ var temp = "";
+for(var i=a-1;i>=0;i--)
+{
+    temp = temp + n[i];
+}
+return temp ;
+}
+console.log(reverse(n));
+
+o/p:
+
+rawsidnan
+
+
+2. **Palindrome Check:**
+   Write a function that checks whether a given string is a palindrome (reads the same forwards and backward). Ignore spaces, punctuation, and capitalization.
+
+
+var n = "madam";
+
+function reverse(n)
+{
+a = n.toLowerCase().length;
+var temp = "";
+for(var i=a-1;i>=0;i--)
+{
+    temp = temp + n[i];
+}
+
+return temp==n?" temp+"string is palindrome":temp+"string is not palindrome";
+}
+console.log(reverse(n));
+
+o/p:
+sting is palindrome
+
+
+3.**Anagram Detection:**
+   Write a function that checks if two words are anagrams of each other. Anagrams are words or phrases formed by rearranging the letters of another.
+
+ans:
+
+var a = "listen";
+var b= "silent";
+function Anagram(a,b)
+{
+var c = a.split("").sort().toString();
+var d = b.split("").sort().toString();
+return c === d ? "given strings are anagrams": "is not a anagrams";
+}
+console.log(Anagram(a,b));
+
+
+o/p:
+given strings are anagrams
+
+
+
+4. **Count Vowels and Consonants:**
+   Write a function that counts the number of vowels and consonants in a given string.
+
+a="i am ram "
+var vowels=0;
+var consonants=0;
+var gap=0;
+for(var i of a)
+{
+    
+    if(i == "a"||i == "e"||i == "i"||i == "o"||i == "u")
+    {
+      vowels++  
+    }
+    else if(i == " "){
+           gap++;
+         }
+
+    else{
+        consonants++;
+    }
+}
+console.log(vowels + " vowels " + consonants + " consonants ")
+
+o/p:
+
+3 vowels 3 consonants
+
+ 
+
+5. **Capitalize the First Letter of Each Word:**
+   Write a function that capitalizes the first letter of each word in a given sentence.
+ans:
+n="i am  a good boy"
+function camelcase(n){
+var a=n.split(" ");
+var temp = "";
+for (var i of a)
+{  
+    var x = i.substr(0,1).toUpperCase() + i.substr(1);
+    temp = temp+x+" ";
+}
+return temp;
+}
+console.log(camelcase(n));
+
+o/p:
+
+I Am  A Good Boy 
+
+
+6.**String Compression:**
+   Implement a function to perform basic string compression using the counts of repeated characters. For example, "aabcccccaaa" becomes "a2b1c5a3".
+
+
+7.**Find the Longest Word:**
+   Write a function that finds the longest word in a sentence. If two or more words have the same length, return the first one.
+ans:
+
+var n = "nandiswar is a good boy";
+function LongestWord(n)
+{
+    var a=n.split(" ") 
+    var temp = 0;
+    var temp2 = 0;
+for(i=0;i<a.length;i++)
+{
+    if(a[i].length > temp)
+    {
+        temp = a[i].length;
+        temp2=a[i];
+    }
+}
+return temp2 + " longest word in given sentence";
+
+}
+console.log(LongestWord(n));
+
+o/p:
+
+nandiswar longest word in given sentence
+
+8. **Title Case a Sentence:**
+   Write a function that converts a sentence to title case, where the first letter of each word is capitalized.
+ans:
+n="i am  a good boy"
+function camelcase(n){
+var a=n.split(" ");
+var temp = "";
+for (var i of a)
+{  
+    var x = i.substr(0,1).toUpperCase() + i.substr(1);
+    temp = temp+x+" ";
+}
+return temp;
+}
+console.log(camelcase(n));
+
+o/p:
+
+I Am  A Good Boy 
+
+9.
+
+10. **String Rotation:**
+    Write a function that checks if one string is a rotation of another. For example, "waterbottle" is a rotation of "erbottlewat."
+
+var a="waterbottle";
+var b = a.slice(3)+a.slice(0,3);
+var c = a.substr(3)+a.substr(0,3);
+var d = a.substring(3)+a.substring(0,3);
+console.log(b);
+console.log(c);
+console.log(d);
+
+o/p:
+
+erbottlewat
+erbottlewat
+erbottlewat
+
+
+
+
+
